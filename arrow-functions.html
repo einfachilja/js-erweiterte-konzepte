@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04 - arrow-functions</title>
+</head>
+
+<script>
+
+    function init() {
+        console.log((getNum()));
+        console.log((testVariable()));
+        console.log((numOnj.testObject()));
+        fiterArray();
+    }
+
+    function getNum() {
+        return 2;
+    }
+
+    let testVariable = () => { return 'test function'; }
+
+    let numOnj = {
+        'testObject': () => { return 'test object'; }
+    };
+
+    // längere schreibweise
+    // function fiterArray() {
+    //     let testArray = [5, 6, 78, 11, 6];
+    //     return console.log(testArray.filter(isBiggerTen.bind()));
+    // }
+
+    // function isBiggerTen(a) {
+    //     return a > 10;
+    // }
+
+    // kürzere schreibweise mit arrow function
+    function fiterArray() {
+        let testArray = [5, 6, 78, 11, 6];
+        return console.log(testArray.filter((element) => {return element > 10} ));
+    }
+
+</script>
+
+<body onload="init()">
+
+</body>
+
+</html>
