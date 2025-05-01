@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03 - if/else vs. ternary-operator ( boolean ? val1 : val2 )</title>
+
+    <style>
+        body {
+            background-color: #021722;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+        }
+    </style>
+
+    <script>
+
+        let lang = 'de';
+
+        function init() {
+            let myTitle = lang == 'de' ? 'Webseite' : 'Website';
+
+            // if (lang == 'de') {
+            //     myTitle = 'Webseite';
+            // } else {
+            //     myTitle = 'Website';
+            // }
+
+            document.getElementById('title').innerHTML = myTitle;
+        }
+
+    </script>
+
+</head>
+
+<body onload="init()">
+
+    <h1 id="title">Webseite</h1>
+
+</body>
+
+</html>
