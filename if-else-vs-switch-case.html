@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02 - if/else vs. switch case</title>
+
+    <style>
+        body {
+            background-color: #021722;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    </style>
+
+    <script>
+
+        let color = 'green';
+
+        function init() {
+            trueVersion();
+        }
+
+        function newVersion() {
+            let colorcode;
+
+            switch (color) { // wird verglichen, ob Key color dem value red entspricht usw.
+                case 'red':
+                    console.log('no capital r');
+                case 'Red': // ganz einfach meherer cases einbauen
+
+                    colorcode = '#ba0e1b';
+                    break;
+
+                case 'green':
+                    colorcode = '#0eba1e';
+                    break;
+
+                default:
+                    colorcode = '#210eba';
+                    break;
+            }
+
+            document.getElementById('title').style.color = colorcode;
+        }
+
+        function trueVersion() {
+            let colorcode;
+
+            switch (true) { // wird verglichen, ob Key color dem value red entspricht usw.
+                case color == 'red':
+                    console.log('no capital r');
+
+                case color == 'Red': // ganz einfach meherer cases einbauen
+                    colorcode = '#ba0e1b';
+                    break;
+
+                case color == 'green':
+                    colorcode = '#0eba1e';
+                    break;
+
+                default:
+                    colorcode = '#210eba';
+                    break;
+            }
+
+            document.getElementById('title').style.color = colorcode;
+        }
+
+        function oldVersion() {
+            let colorcode;
+
+            if (color == 'red') {
+                colorcode = '#ba0e1b';
+            } else if (color == 'green') {
+                colorcode = '#0eba1e';
+            } else {
+                colorcode = '#210eba'
+            }
+
+            document.getElementById('title').style.color = colorcode;
+        }
+
+    </script>
+
+</head>
+
+<body onload="init()">
+
+    <h1 id="title">SwitchCase</h1>
+
+</body>
+
+</html>
